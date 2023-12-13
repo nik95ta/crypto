@@ -1,0 +1,16 @@
+declare module 'tronweb';
+declare module 'bip32';
+declare module 'bip39';
+declare module 'ec';
+declare module 'coinkey';
+declare module 'coininfo';
+declare module 'multicoin-address-validator';
+declare module 'page-lifecycle';
+declare module 'text-decoding';
+declare module 'bchaddrjs';
+declare module '@psf/bch-js';
+declare module '@cosmostation/cosmosjs';
+declare module 'stellar-hd-wallet';
+declare module '@vechain/connex-framework';
+declare module '@vechain/web3-providers-connex';
+declare module 'get-browser-fingerprint';
