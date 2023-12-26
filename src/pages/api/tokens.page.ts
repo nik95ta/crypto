@@ -6,7 +6,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<any>) 
     const searchStr: string = req.query.searchStr as string;
 
     const filteredCoins = coins.filter(
-      (coin) => coin.name.includes(searchStr) || coin.symbol.toLowerCase().includes(searchStr)
+      (coin) =>
+        coin.name.includes(searchStr) ||
+        coin.symbol.toLowerCase().includes(searchStr) ||
+        coin.name_fa.includes(searchStr)
     );
 
     setTimeout(

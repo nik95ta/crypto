@@ -1,17 +1,12 @@
 import React from 'react';
-import { useRouter } from 'next/router';
-import { PageContainer, TopNav } from '@/components';
-import BackIcon from '@assets/back.svg';
+import { PageContainer, TokenSearch, TopNav } from '@/components';
+import SearchIcon from '@assets/search.svg';
 
 const ManageTokens = () => {
-  const router = useRouter();
-
   return (
     <PageContainer>
-      <TopNav
-        centerComponent={<p>مدیریت لیست کوین‌ها</p>}
-        leftComponent={<BackIcon onClick={() => router.push('/')} />}
-      />
+      <TopNav centerComponent={<p>مدیریت لیست کوین‌ها</p>} rightComponent={<SearchIcon />} />
+      <TokenSearch />
     </PageContainer>
   );
 };
