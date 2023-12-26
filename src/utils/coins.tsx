@@ -1,243 +1,305 @@
-export const coins: coin[] = [
+export const coins = [
   {
     name: 'ethereum',
-    symbol: 'ETH'
+    symbol: 'ETH',
+    name_fa: 'اتریوم'
   },
   {
     name: 'usdd',
-    symbol: 'USDD'
+    symbol: 'USDD',
+    name_fa: 'یواس‌دی‌دی'
   },
   {
     name: 'axie_infinity',
-    symbol: 'AXS'
+    symbol: 'AXS',
+    name_fa: 'اکسی اینفینیتی'
   },
   {
     name: 'immutable',
-    symbol: 'IMX'
+    symbol: 'IMX',
+    name_fa: 'ایمیوتیبل'
   },
   {
     name: 'vechain',
-    symbol: 'VET'
+    symbol: 'VET',
+    name_fa: 'ویچین'
   },
   {
     name: 'vethor',
-    symbol: 'VTHO'
+    symbol: 'VTHO',
+    name_fa: 'وتور'
   },
   {
     name: 'optimism',
-    symbol: 'OP'
+    symbol: 'OP',
+    name_fa: 'اپتیمیسم'
   },
   {
     name: 'paxgold',
-    symbol: 'PAXG'
+    symbol: 'PAXG',
+    name_fa: 'پکس گلد'
   },
   {
     name: 'paxdollar',
-    symbol: 'USDP'
+    symbol: 'USDP',
+    name_fa: 'دلار پکس'
   },
   {
     name: 'pepe',
-    symbol: 'PEPE'
+    symbol: 'PEPE',
+    name_fa: 'پپه'
   },
   {
     name: 'huobitoken',
-    symbol: 'HT'
+    symbol: 'HT',
+    name_fa: 'هوبی'
   },
   {
     name: 'gnosis',
-    symbol: 'GNO'
+    symbol: 'GNO',
+    name_fa: 'گنوسیس'
   },
   {
     name: 'curvedaotoken',
-    symbol: 'CRV'
+    symbol: 'CRV',
+    name_fa: 'کورو دائو'
   },
   {
     name: 'iota',
-    symbol: 'IOTA'
+    symbol: 'IOTA',
+    name_fa: 'ایوتا'
   },
   {
     name: 'stepn',
-    symbol: 'GMT'
+    symbol: 'GMT',
+    name_fa: 'استپ ان'
   },
   {
     name: 'nearprotocol',
-    symbol: 'NEAR'
+    symbol: 'NEAR',
+    name_fa: 'نیر پروتکل'
   },
   {
     name: 'trustwallettoken',
-    symbol: 'TWT'
+    symbol: 'TWT',
+    name_fa: 'تراست ولت'
   },
   {
     name: 'tethergold',
-    symbol: 'XAUT'
+    symbol: 'XAUT',
+    name_fa: 'طلا تتر'
   },
   {
     name: 'gmx',
-    symbol: 'GMX'
+    symbol: 'GMX',
+    name_fa: 'جی ام ایکس'
   },
   {
     name: 'synthetix',
-    symbol: 'SNX'
+    symbol: 'SNX',
+    name_fa: 'سینتتیکس'
   },
   {
     name: 'render',
-    symbol: 'RNDR'
+    symbol: 'RNDR',
+    name_fa: 'رندر'
   },
   {
     name: 'cronos',
-    symbol: 'CRO'
+    symbol: 'CRO',
+    name_fa: 'کرونوس'
   },
   {
     name: 'mantle',
-    symbol: 'MNT'
+    symbol: 'MNT',
+    name_fa: 'منتل'
   },
   {
     name: 'quant',
-    symbol: 'QNT'
+    symbol: 'QNT',
+    name_fa: 'کوانت'
   },
   {
     name: 'maker',
-    symbol: 'MKR'
+    symbol: 'MKR',
+    name_fa: 'میکر'
   },
   {
     name: 'arbitrum',
-    symbol: 'ARB'
+    symbol: 'ARB',
+    name_fa: 'آربیترم'
   },
   {
     name: 'ethereumclassic',
-    symbol: 'ETC'
+    symbol: 'ETC',
+    name_fa: 'اتریوم کلاسیک'
   },
   {
     name: 'stellar',
-    symbol: 'XLM'
+    symbol: 'XLM',
+    name_fa: 'استلار'
   },
   {
     name: 'uniswap',
-    symbol: 'UNI'
+    symbol: 'UNI',
+    name_fa: 'یونی‌سواپ'
   },
   {
     name: 'lido_dao',
-    symbol: 'LDO'
+    symbol: 'LDO',
+    name_fa: 'لیدو دائو'
   },
   {
     name: 'atom',
-    symbol: 'ATOM'
+    symbol: 'ATOM',
+    name_fa: 'اتم'
   },
   {
     name: 'filecoin',
-    symbol: 'FIL'
+    symbol: 'FIL',
+    name_fa: 'فایل‌کوین'
   },
   {
     name: 'aptos',
-    symbol: 'APT'
+    symbol: 'APT',
+    name_fa: 'آپتوس'
   },
   {
     name: 'algorand',
-    symbol: 'ALGO'
+    symbol: 'ALGO',
+    name_fa: 'الگورند'
   },
   {
     name: 'apecoin',
-    symbol: 'APE'
+    symbol: 'APE',
+    name_fa: 'ایپ‌کوین'
   },
   {
     name: 'leotoken',
-    symbol: 'LEO'
+    symbol: 'LEO',
+    name_fa: 'توکن لئو'
   },
   {
     name: 'trueusd',
-    symbol: 'TUSD'
+    symbol: 'TUSD',
+    name_fa: 'ترو دلار'
   },
   {
     name: 'okb',
-    symbol: 'OKB'
+    symbol: 'OKB',
+    name_fa: 'اوکی بی'
   },
   {
     name: 'wrappedbitcoin',
-    symbol: 'WBTC'
+    symbol: 'WBTC',
+    name_fa: 'رپد بیتکوین'
   },
   {
     name: 'shiba_inu',
-    symbol: 'SHIB'
+    symbol: 'SHIB',
+    name_fa: 'شیبا اینو'
   },
   {
     name: 'usdcoin',
-    symbol: 'USDC'
+    symbol: 'USDC',
+    name_fa: 'دلار امریکا'
   },
   {
     name: 'dai',
-    symbol: 'DAI'
+    symbol: 'DAI',
+    name_fa: 'دای'
   },
   {
     name: 'chainlink',
-    symbol: 'LINK'
+    symbol: 'LINK',
+    name_fa: 'چین‌لینک'
   },
   {
     name: '1inch',
-    symbol: '1INCH'
+    symbol: '1INCH',
+    name_fa: 'وان اینچ'
   },
   {
     name: 'aave',
-    symbol: 'AAVE'
+    symbol: 'AAVE',
+    name_fa: 'آوه'
   },
   {
     name: 'bittorrent',
-    symbol: 'BTT'
+    symbol: 'BTT',
+    name_fa: 'بیت‌تورنت'
   },
   {
     name: 'avalanche',
-    symbol: 'AVAX'
+    symbol: 'AVAX',
+    name_fa: 'آوالانچ'
   },
   {
     name: 'binancecoin',
-    symbol: 'BNB'
+    symbol: 'BNB',
+    name_fa: 'بایننس کوین'
   },
   {
     name: 'polygon',
-    symbol: 'MATIC'
+    symbol: 'MATIC',
+    name_fa: 'پلیگان'
   },
   {
     name: 'solana',
-    symbol: 'SOL'
+    symbol: 'SOL',
+    name_fa: 'سولانا'
   },
   {
     name: 'tether',
-    symbol: 'USDT'
+    symbol: 'USDT',
+    name_fa: 'تتر'
   },
   {
     name: 'polkadot',
-    symbol: 'DOT'
+    symbol: 'DOT',
+    name_fa: 'پولکادات'
   },
   {
     name: 'tron',
-    symbol: 'TRX'
+    symbol: 'TRX',
+    name_fa: 'ترون'
   },
   {
     name: 'bitcoin',
-    symbol: 'BTC'
+    symbol: 'BTC',
+    name_fa: 'بیتکوین',
+    address: ''
   },
   {
     name: 'bitcoincash',
-    symbol: 'BCH'
+    symbol: 'BCH',
+    name_fa: 'بیتکوین کش'
   },
   {
     name: 'litecoin',
-    symbol: 'LTC'
+    symbol: 'LTC',
+    name_fa: 'لایت کوین'
   },
   {
     name: 'dash',
-    symbol: 'DASH'
+    symbol: 'DASH',
+    name_fa: 'دش'
   },
   {
     name: 'dogecoin',
-    symbol: 'DOGE'
+    symbol: 'DOGE',
+    name_fa: 'دوج کوین'
   },
   {
     name: 'cardano',
-    symbol: 'ADA'
+    symbol: 'ADA',
+    name_fa: 'کاردانو'
   },
   {
     name: 'ripple',
-    symbol: 'XRP'
+    symbol: 'XRP',
+    name_fa: 'ریپل'
   }
 ];
+
 export default coins;
