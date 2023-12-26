@@ -1,12 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
 import { TokenInterface } from '@/interfaces';
 import { Address, ManageList, StyledLink } from './index.styles';
+import { RootState } from '@/store';
 import { List, Row, TokenTitle } from '@/components';
-import coins from '@/utils/coins';
 
 const Dashboard = () => {
-  const selectedTokens = coins;
+  const selectedTokens = useSelector((state: RootState) => state.tokens.selectedTokens);
   return (
     <List>
       {selectedTokens.map((token: TokenInterface) => (

@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { TokenInterface } from '@/interfaces';
-import { List, Row, SearchBox, TokenTitle } from '@/components';
+import { List, Row, SearchBox, Switch, TokenTitle } from '@/components';
 import { useDebounce } from '@/hooks';
+import { toggleToken } from '@/features/token';
+import { AppDispatch, RootState } from '@/store';
 
 const TokenSearch = () => {
   const [searchStr, setSearchStr] = useState('');
   const debouncedSearchStr = useDebounce(searchStr);
   const [isLoading, setIsLoading] = useState(false);
-  const [tokens, setTokens] = useState<TokenInterface[]>([]);
+  const selectedTokens = useSelector((state: RootState) => state.tokens.selectedTokens);
+  const [tokens, setTokens] = useState(selectedTokens);
+  const dispatch = useDispatch<AppDispatch>();
 
   const fetchTokens = async (query: string) => {
     setIsLoading(true);
@@ -25,10 +30,12 @@ const TokenSearch = () => {
   useEffect(() => {
     if (debouncedSearchStr) {
       fetchTokens(debouncedSearchStr);
-    } else {
-      setTokens([]);
     }
   }, [debouncedSearchStr]);
+
+  const onTokenToggle = (token: TokenInterface) => {
+    dispatch(toggleToken(token));
+  };
 
   return (
     <>
@@ -40,6 +47,10 @@ const TokenSearch = () => {
           {tokens?.map((token: TokenInterface) => (
             <Row key={token?.symbol}>
               <TokenTitle symbol={token.symbol} name={token.name_fa} />
+              <Switch
+                isOn={selectedTokens.some((item: TokenInterface) => item.symbol === token.symbol)}
+                onToggle={() => onTokenToggle(token)}
+              />
             </Row>
           ))}
         </List>
