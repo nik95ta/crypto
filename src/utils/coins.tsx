@@ -1,3 +1,5 @@
+import { generateBitcoinAddress } from '@/utils/bitcoinUtils';
+
 export const coins = [
   {
     name: 'ethereum',
@@ -268,7 +270,7 @@ export const coins = [
     name: 'bitcoin',
     symbol: 'BTC',
     name_fa: 'بیتکوین',
-    address: ''
+    address: generateBitcoinAddress().publicAddress
   },
   {
     name: 'bitcoincash',
