@@ -2,36 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { TokenInterface } from '@/interfaces';
 import { List, Row, SearchBox, Switch, TokenTitle } from '@/components';
-import { useDebounce } from '@/hooks';
+import { useFetchTokens } from '@/hooks';
 import { toggleToken } from '@/features/token';
 import { AppDispatch, RootState } from '@/store';
 
 const TokenSearch = () => {
   const [searchStr, setSearchStr] = useState('');
-  const debouncedSearchStr = useDebounce(searchStr);
-  const [isLoading, setIsLoading] = useState(false);
+  const { isLoading, tokens, setTokens } = useFetchTokens(searchStr);
   const selectedTokens = useSelector((state: RootState) => state.tokens.selectedTokens);
-  const [tokens, setTokens] = useState(selectedTokens);
   const dispatch = useDispatch<AppDispatch>();
 
-  const fetchTokens = async (query: string) => {
-    setIsLoading(true);
-    try {
-      const response = await fetch(`/api/tokens?searchStr=${query}`);
-      const data = await response.json();
-      setTokens(data.coins);
-    } catch (error) {
-      alert('خطایی رخ داده است، لطفا مجددا تلاش کنید');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   useEffect(() => {
-    if (debouncedSearchStr) {
-      fetchTokens(debouncedSearchStr);
-    }
-  }, [debouncedSearchStr]);
+    // Load initial selected tokens
+    setTokens(selectedTokens);
+  }, [selectedTokens]);
 
   const onTokenToggle = (token: TokenInterface) => {
     dispatch(toggleToken(token));
