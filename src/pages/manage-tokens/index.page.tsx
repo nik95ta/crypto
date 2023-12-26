@@ -1,19 +1,18 @@
 import React from 'react';
-import { Container } from './index.styles';
 import { useRouter } from 'next/router';
-import { TopNav } from '@/components';
+import { PageContainer, TopNav } from '@/components';
 import BackIcon from '@assets/back.svg';
 
 const ManageTokens = () => {
   const router = useRouter();
 
   return (
-    <Container>
+    <PageContainer>
       <TopNav
-        centerComponent={<p>مدیریت لیست کوین ها</p>}
+        centerComponent={<p>مدیریت لیست کوین‌ها</p>}
         leftComponent={<BackIcon onClick={() => router.push('/')} />}
       />
-    </Container>
+    </PageContainer>
   );
 };
 

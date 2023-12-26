@@ -1,9 +1,11 @@
 import React from 'react';
+import { Dashboard, PageContainer, TopNav } from '@/components';
 
 export default function Home() {
   return (
-    <>
-      <h4>داشبورد</h4>
-    </>
+    <PageContainer>
+      <TopNav centerComponent={<p>داشبورد</p>} leftComponent={<></>} />
+      <Dashboard />
+    </PageContainer>
   );
 }
