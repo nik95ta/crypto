@@ -27,7 +27,6 @@ I decided to refactor this project and have committed this refactored version wi
 - Generating public and private Bitcoin addresses using the `bs58` and `elliptic` packages
 - Displaying a list of selected tokens upon initially opening the manage page
 - Implemented debouncing for searches using a custom hook
-- Added a custom hook for improved maintainability in search functionality
 - Enabled searching by Persian names
 - Utilized Redux Toolkit for enhanced management of the list of selected tokens
 - Added a fixed footer for the manage token button
